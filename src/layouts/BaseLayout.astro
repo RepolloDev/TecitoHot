@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="cattpuccin">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <slot name="head" />
+    <!-- Util Scripts -->
+    <script is:inline>
+      function isDarkMode() {
+        const localTheme = localStorage.getItem("theme");
+        const prefersDarkScheme = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        );
+        return (
+          localTheme === "dark" || (!localTheme && prefersDarkScheme.matches)
+        );
+      }
+
+      const SCHEME = {
+        LIGHT: "latte",
+        DARK: "mocha",
+      };
+
+      function setLightTheme() {
+        document.documentElement.classList.add("light", SCHEME.LIGHT);
+        document.documentElement.setAttribute("data-theme", SCHEME.LIGHT);
+        localStorage.setItem("theme", "light");
+        // remove dark theme classes
+        document.documentElement.classList.remove("dark", SCHEME.DARK);
+      }
+
+      function setDarkTheme() {
+        document.documentElement.classList.add("dark", SCHEME.DARK);
+        document.documentElement.setAttribute("data-theme", SCHEME.DARK);
+        localStorage.setItem("theme", "dark");
+        // remove light theme classes
+        document.documentElement.classList.remove("light", SCHEME.LIGHT);
+      }
+
+      isDarkMode() ? setDarkTheme() : setLightTheme();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

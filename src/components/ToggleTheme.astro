@@ -1,0 +1,27 @@
+<label class="swap swap-rotate" for="theme-controller">
+  <span class="sr-only">Toggle theme button</span>
+
+  <!-- this hidden checkbox controls the state -->
+  <input id="theme-controller" type="checkbox" class="theme-controller" />
+
+  <!-- sun icon -->
+  <i class="swap-off h-10 w-10 iconify ph--sun-duotone">
+    <span class="sr-only">sun icon</span>
+  </i>
+
+  <!-- moon icon -->
+  <i class="swap-on h-10 w-10 iconify ph--moon-stars-duotone">
+    <span class="sr-only">moon icon</span>
+  </i>
+</label>
+
+<script is:inline>
+  const themeController = document.getElementById("theme-controller");
+  // global function to check if dark mode is enabled
+  themeController.checked = isDarkMode();
+  themeController?.addEventListener("change", () => {
+    const { checked } = themeController;
+    // setDarkTheme and setLightTheme are global functions
+    checked ? setDarkTheme() : setLightTheme();
+  });
+</script>
