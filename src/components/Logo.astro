@@ -1,0 +1,34 @@
+---
+interface Props {
+  class?: string;
+  border?: boolean;
+}
+
+const { class: classList, border = false } = Astro.props;
+---
+
+<span class="logo w-10 h-10 inline-block" class:list={[{ border }, classList]}>
+  <span class="sr-only">TecitoHot Logo</span>
+</span>
+
+<style is:global>
+  .logo {
+    background-image: url("../assets/logos/logo-light.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none !important;
+  }
+
+  .logo.border {
+    background-image: url("../assets/logos/logo-light-border.svg");
+  }
+
+  .dark .logo {
+    background-image: url("../assets/logos/logo-dark.svg");
+  }
+
+  .dark .logo.border {
+    background-image: url("../assets/logos/logo-dark-border.svg");
+  }
+</style>
