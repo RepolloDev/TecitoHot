@@ -45,6 +45,9 @@ El proyecto fracasó en sus primeras versiones, por mi propia falta de conocimie
 
 > Ser la plataforma más grande de aprendizaje teórico en español 🚀
 
+> [!NOTE]
+> Actualmente, el proyecto es una escusa para crear videos en [@RepolloDev](https://www.youtube.com/@RepolloDev), siendo que deseo que cada video tenga un contenido escrito y organizado, para que el espectador pueda acceder a la información de forma rápida y sencilla.
+
 ## 👀 A donde vamos a llegar?
 
 **TecitoHot** comienza por la idea de ser un blog de informática para compartir lo que se aprende en la universidad y en la vida diaria, pero se busca escalar a una plataforma de aprendizaje.
