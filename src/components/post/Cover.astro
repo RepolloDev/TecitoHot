@@ -1,0 +1,32 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import FallBackCover from "@/assets/images/fallbackcover.webp";
+
+interface Props {
+  cover: string;
+  slug: string;
+  alt?: string;
+  class?: string;
+}
+
+const { slug, cover, alt, class: className } = Astro.props;
+const postPath = `/src/content/posts/${slug}`;
+const fixCoverPath = `${postPath}/${cover}`;
+
+let ImageSource = FallBackCover;
+try {
+  const imported = await import(fixCoverPath);
+  const Cover = imported.default as ImageMetadata;
+  // Check if the image is not found
+  if (!Cover || !Cover.src) {
+    throw new Error("Imported image is not valid or not found");
+  }
+  ImageSource = Cover;
+} catch (error) {
+  console.info("Not found:", fixCoverPath);
+  console.error(`Error loading the image: ${error}`);
+}
+---
+
+<Image src={ImageSource} alt={alt || "Post Cover"} class:list={[className]} />
