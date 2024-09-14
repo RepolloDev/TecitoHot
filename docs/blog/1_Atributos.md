@@ -1,4 +1,4 @@
-## 🪅 Atributos
+# 🪅 Atributos
 
 Muy aparte del propio contenido de un blog, es importante tener en cuenta los atributos que lo definen. Estos atributos son los que permiten identificar y clasificar el contenido, y son los que permiten a los usuarios encontrar y acceder a la información que buscan.
 
