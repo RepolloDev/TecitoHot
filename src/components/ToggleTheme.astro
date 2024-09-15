@@ -1,3 +1,11 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
 <label class="swap swap-rotate" for="theme-controller">
   <span class="sr-only">Toggle theme button</span>
 
@@ -5,12 +13,12 @@
   <input id="theme-controller" type="checkbox" class="theme-controller" />
 
   <!-- sun icon -->
-  <i class="swap-off h-10 w-10 iconify ph--sun-duotone">
+  <i class="swap-off h-8 w-8 iconify ph--sun-duotone" class:list={[className]}>
     <span class="sr-only">sun icon</span>
   </i>
 
   <!-- moon icon -->
-  <i class="swap-on h-10 w-10 iconify ph--moon-stars-duotone">
+  <i class="swap-on h-8 w-8 iconify ph--moon-stars-duotone" class:list={[className]}>
     <span class="sr-only">moon icon</span>
   </i>
 </label>
