@@ -21,8 +21,15 @@ function mapColors(colorsObj) {
   }
   return scheme;
 }
-latte = mapColors(latte.colors);
-mocha = mapColors(mocha.colors);
+
+const baseConfig = {
+  "--rounded-box": "0rem",
+  "--rounded-btn": "0rem",
+  "--rounded-badge": "0rem",
+};
+
+latte = {...mapColors(latte.colors), ...baseConfig};
+mocha = {...mapColors(mocha.colors), ...baseConfig};
 
 /** @type {import('tailwindcss').Config} */
 export default {
