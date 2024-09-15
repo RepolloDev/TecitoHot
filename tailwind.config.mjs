@@ -28,7 +28,13 @@ mocha = mapColors(mocha.colors);
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // Pixel font
+        "jersey-10": ["Jersey 10", "monospace"],
+        
+      },
+    },
   },
   darkMode: "class",
   plugins: [require("daisyui"), addIconSelectors(["ph"])],
