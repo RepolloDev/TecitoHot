@@ -1,0 +1,37 @@
+---
+import Logo from "./Logo.astro";
+import LogoText from "./LogoText.astro";
+---
+
+<footer
+  class="footer footer-center bg-primary text-primary-content md:p-4 lg:p-8 xl:p-12"
+>
+  <aside>
+    <Logo class="w-32 h-32" />
+    <LogoText class="text-4xl" />
+    <p class="font-bold w-[40ch]">
+      Blog de informática, programación teórica y práctica de forma
+      simplificada.
+    </p>
+    <p>Creado con ❤️ en 2024</p>
+  </aside>
+  <nav>
+    <div class="grid grid-flow-col gap-4">
+      <a href="https://github.com/RepolloDev/TecitoHot">
+        <i class="iconify ph--github-logo-duotone w-8 h-8">
+          <span class="sr-only">Github icon</span>
+        </i>
+      </a>
+      <a href="https://www.youtube.com/@RepolloDev">
+        <i class="iconify ph--youtube-logo-duotone w-8 h-8">
+          <span class="sr-only">Youtube icon</span>
+        </i>
+      </a>
+      <a href="https://x.com/RepolloDev">
+        <i class="iconify ph--x-logo-duotone w-8 h-8">
+          <span class="sr-only">X icon</span>
+        </i>
+      </a>
+    </div>
+  </nav>
+</footer>
