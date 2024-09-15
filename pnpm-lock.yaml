@@ -17,6 +17,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.15.4(rollup@4.21.2)(typescript@5.6.2))(tailwindcss@3.4.11)
+      '@fontsource/geist-sans':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/jersey-10':
         specifier: ^5.1.0
         version: 5.1.0
@@ -364,6 +367,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/geist-sans@5.1.0':
+    resolution: {integrity: sha512-4AI/UxIcZiYgK6/cTo4R9oM4VHHLcFdHVv7m2+M42VyY16hhKJADrGe4HPjTxvolmce2IZX/jc6sFJ+GkLB64w==}
 
   '@fontsource/jersey-10@5.1.0':
     resolution: {integrity: sha512-b1pJNWCQbIHEJpMpnfbJZS2NQgVf6pKgv+Cgj/019u+fXV6nk09rPhd8FCfJyBaqePxPgB6xM6FCHNIiN0yqZQ==}
@@ -2669,6 +2675,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource/geist-sans@5.1.0': {}
 
   '@fontsource/jersey-10@5.1.0': {}
 
