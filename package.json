@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@catppuccin/palette": "^1.3.0",
+    "@catppuccin/tailwindcss": "^0.1.6",
     "@iconify-json/ph": "^1.2.0",
     "@iconify/tailwind": "^1.1.3",
     "daisyui": "^4.12.10",

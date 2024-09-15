@@ -28,8 +28,8 @@ const baseConfig = {
   "--rounded-badge": "0rem",
 };
 
-latte = {...mapColors(latte.colors), ...baseConfig};
-mocha = {...mapColors(mocha.colors), ...baseConfig};
+latte = { ...mapColors(latte.colors), ...baseConfig };
+mocha = { ...mapColors(mocha.colors), ...baseConfig };
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -45,7 +45,11 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [require("daisyui"), addIconSelectors(["ph"])],
+  plugins: [
+    require("daisyui"),
+    addIconSelectors(["ph"]),
+    require("@catppuccin/tailwindcss"),
+  ],
   daisyui: {
     themes: [
       {
