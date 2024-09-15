@@ -1,0 +1,113 @@
+---
+import LogoText from "./LogoText.astro";
+import ToggleTheme from "./ToggleTheme.astro";
+
+interface Option {
+  name: string;
+  href: string;
+  submenu?: Option[];
+}
+
+const options: Option[] = [
+  { name: "Item 1", href: "#" },
+  {
+    name: "Parent",
+    href: "#",
+    submenu: [
+      { name: "Submenu 1", href: "#" },
+      { name: "Submenu 2", href: "#" },
+    ],
+  },
+  { name: "Item 3", href: "#" },
+];
+---
+
+<header class="fixed w-full z-50 bg-none">
+  <div class="navbar bg-base-100 bg-opacity-70 md:px-4 lg:px-8 xl:px-12">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div
+          tabindex="0"
+          role="button"
+          class="btn btn-ghost btn-sm btn-square mr-2 lg:hidden"
+        >
+          <i class="iconify ph--list w-6 h-6"></i>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+        >
+          {
+            options.map(({ name, href, submenu }) => (
+              <li>
+                <a href={href}>{name}</a>
+                {submenu && (
+                  <ul class="p-2">
+                    {submenu.map(({ name, href }) => (
+                      <li>
+                        <a href={href}>{name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <a href="/">
+        <LogoText class="md:text-4xl" />
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        {
+          options.map(({ name, href, submenu }) => (
+            <li>
+              {submenu ? (
+                <details>
+                  <summary>{name}</summary>
+                  <ul class="p-2">
+                    {submenu.map(({ name, href }) => (
+                      <li>
+                        <a href={href}>{name}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ) : (
+                <a href={href}>{name}</a>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="navbar-end gap-2">
+      <a
+        href="https://github.com/RepolloDev/TecitoHot"
+        class="btn btn-circle btn-ghost btn-sm md:btn-md"
+      >
+        <i class="iconify ph--github-logo-duotone w-6 h-6 md:w-8 md:h-8">
+          <span class="sr-only">Github icon</span>
+        </i>
+      </a>
+      <span class="btn btn-circle btn-neutral btn-sm md:btn-md">
+        <ToggleTheme class="w-6 h-6 md:w-8 md:h-8" />
+      </span>
+    </div>
+  </div>
+</header>
+
+<style is:inline>
+  /* header glass efect */
+  header .navbar {
+    box-shadow: 0 3px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .dark header .navbar {
+    box-shadow: 0 3px 90px rgba(203, 166, 247, 0.1);
+  }
+</style>
