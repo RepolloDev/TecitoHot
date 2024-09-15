@@ -1,4 +1,15 @@
-<span class="font-jersey-10 inline-flex logo text-2xl select-none">
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<span
+  class="font-jersey-10 inline-flex logo text-2xl select-none overflow-hidden"
+  class:list={[className]}
+>
   <span class="primary inline-block px-1 text-center">Tecito</span>
   <span class="secondary inline-block px-1 text-center">Hot</span>
 </span>
