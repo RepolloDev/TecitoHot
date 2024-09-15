@@ -1,12 +1,12 @@
 ---
-import '@fontsource/jersey-10';
-import '@fontsource/geist-sans';
+import "@fontsource/jersey-10";
+import "@fontsource/geist-sans";
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
-const { title } = Astro.props;
+const { title = "Astro" } = Astro.props;
 ---
 
 <!doctype html>
