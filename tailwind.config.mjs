@@ -31,7 +31,7 @@ export default {
     extend: {
       fontFamily: {
         // Pixel font
-        "jersey-10": ["Jersey 10", "monospace"],
+        "jersey-10": ["'Jersey 10'", "monospace"],
         // Normal font
         "geist-sans": ["Geist Sans", "sans-serif"],
       },
