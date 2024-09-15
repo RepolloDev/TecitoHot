@@ -1,0 +1,28 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string[];
+  authors?: string[];
+}
+
+const { title, description, keywords, authors = ["repollodev"] } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <Fragment slot="head">
+    <meta name="description" content={description} />
+    {keywords && <meta name="keywords" content={`${keywords.join(", ")}`} />}
+    <meta name="author" content={`${authors.join(", ")}`} />
+    <slot name="head" />
+  </Fragment>
+  <Header />
+  <main class="min-h-screen w-full">
+    <slot />
+  </main>
+  <Footer />
+</BaseLayout>
