@@ -58,7 +58,7 @@ const options: Option[] = [
       </div>
       <a href="/" class="flex items-center group">
         <Logo
-          class="w-14 h-14 -translate-y-1.5 group-hover:-rotate-6 group-hover:scale-105 transition-all"
+          class="md:w-14 md:h-14 -translate-y-1.5 group-hover:-rotate-6 group-hover:scale-105 transition-all"
         />
         <LogoText class="md:text-3xl xl:text-4xl" onlytext />
       </a>
@@ -87,7 +87,7 @@ const options: Option[] = [
         }
       </ul>
     </div>
-    <div class="navbar-end gap-2">
+    <div class="navbar-end md:gap-2">
       <a
         href="https://github.com/RepolloDev/TecitoHot"
         class="btn btn-circle btn-ghost btn-sm xl:btn-md"
@@ -96,8 +96,10 @@ const options: Option[] = [
           <span class="sr-only">Github icon</span>
         </i>
       </a>
-      <span class="btn btn-circle btn-neutral btn-sm xl:btn-md">
-        <ToggleTheme class="w-5 h-5 xl:w-8 xl:h-8" />
+      <span
+        class="btn btn-circle btn-sm xl:btn-md bg-yellow-300 hover:bg-yellow-300 text-yellow dark:bg-lavender dark:text-neutral-content"
+      >
+        <ToggleTheme class="w-[1.5rem] h-[1.5rem] xl:w-8 xl:h-8" />
       </span>
     </div>
   </div>
