@@ -10,20 +10,13 @@ interface Option {
 }
 
 const options: Option[] = [
-  { name: "Item 1", href: "#" },
-  {
-    name: "Parent",
-    href: "#",
-    submenu: [
-      { name: "Submenu 1", href: "#" },
-      { name: "Submenu 2", href: "#" },
-    ],
-  },
-  { name: "Item 3", href: "#" },
+  { name: "Posts", href: "/tecitohot/posts" },
+  { name: "Tags", href: "/tecitohot/tags" },
+  { name: "Videos", href: "/tecitohot/tags" },
 ];
 ---
 
-<header class="sticky top-0 w-full z-50 bg-none">
+<header class="sticky top-0 w-full z-50">
   <div class="navbar bg-base-100 md:px-4 lg:px-8 xl:px-12">
     <div class="navbar-start">
       <div class="dropdown">
@@ -58,13 +51,13 @@ const options: Option[] = [
       </div>
       <a href="/" class="flex items-center group">
         <Logo
-          class="md:w-14 md:h-14 -translate-y-1.5 group-hover:-rotate-6 group-hover:scale-105 transition-all"
+          class="lg:w-14 lg:h-14 -translate-y-1 lg:-translate-y-1.5 group-hover:-rotate-6 group-hover:scale-105 transition-all"
         />
         <LogoText class="md:text-3xl xl:text-4xl" onlytext />
       </a>
     </div>
     <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
+      <ul class="menu menu-horizontal px-1 text-lg xl:text-xl">
         {
           options.map(({ name, href, submenu }) => (
             <li>
