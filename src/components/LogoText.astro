@@ -1,21 +1,23 @@
 ---
 interface Props {
   class?: string;
+  simple?: boolean;
+  onlytext?: boolean;
 }
 
-const { class: className } = Astro.props;
+const { class: className, simple, onlytext } = Astro.props;
 ---
 
 <span
-  class="font-jersey-10 inline-flex logo text-2xl select-none overflow-hidden"
-  class:list={[className]}
+  class="font-jersey-10 inline-flex logo-text text-2xl select-none overflow-hidden"
+  class:list={[className, { simple }, { onlytext }]}
 >
   <span class="primary inline-block px-1 text-center">Tecito</span>
   <span class="secondary inline-block px-1 text-center">Hot</span>
 </span>
 
 <style is:inline>
-  .logo {
+  .logo-text {
     --logo-primary: #80ed99;
     --logo-primary-text: #40a02b;
     --logo-secondary: #f4d35e;
@@ -27,13 +29,35 @@ const { class: className } = Astro.props;
     --logo-secondary: #eed49f;
   }
 
-  .logo .primary {
+  .logo-text .primary {
     background-color: var(--logo-primary);
     color: var(--logo-primary-text);
   }
 
-  .logo .secondary {
+  .logo-text .secondary {
     background-color: var(--logo-secondary);
     color: var(--logo-secondary-text);
+  }
+
+  .logo-text.simple,
+  .logo-text.onlytext {
+    --logo-primary-text: #000000;
+    --logo-secondary-text: #df8e1d;
+  }
+
+  .dark .logo-text.simple,
+  .dark .logo-text.onlytext {
+    --logo-primary-text: #ffffff;
+    --logo-secondary-text: #fab387;
+  }
+
+  .logo-text.simple {
+    --logo-primary: #fff;
+    --logo-secondary: #fff;
+  }
+
+  .logo-text.onlytext {
+    --logo-primary: transparent;
+    --logo-secondary: transparent;
   }
 </style>
