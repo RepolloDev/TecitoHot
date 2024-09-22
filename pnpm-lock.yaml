@@ -20,6 +20,9 @@ importers:
       '@fontsource/caveat-brush':
         specifier: ^5.1.0
         version: 5.1.0
+      '@fontsource/geist-mono':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/geist-sans':
         specifier: ^5.1.0
         version: 5.1.0
@@ -381,6 +384,9 @@ packages:
 
   '@fontsource/caveat-brush@5.1.0':
     resolution: {integrity: sha512-7O/+D6gacWQoj0kLXbibITBg7CXza0HpCTwRt18mPcj5Udpi7REwn2UPBBcrxvt1CX/nGDFLhFUgxoS5zZG/jg==}
+
+  '@fontsource/geist-mono@5.1.0':
+    resolution: {integrity: sha512-MDFgmKUdDbV357vD2bOZAro597Nd2md01GAdr3GSZteCJQdPT/UhHUBCAxl9KUiH03aMPFM9Rx7x8/EtrJmpKg==}
 
   '@fontsource/geist-sans@5.1.0':
     resolution: {integrity: sha512-4AI/UxIcZiYgK6/cTo4R9oM4VHHLcFdHVv7m2+M42VyY16hhKJADrGe4HPjTxvolmce2IZX/jc6sFJ+GkLB64w==}
@@ -2695,6 +2701,8 @@ snapshots:
     optional: true
 
   '@fontsource/caveat-brush@5.1.0': {}
+
+  '@fontsource/geist-mono@5.1.0': {}
 
   '@fontsource/geist-sans@5.1.0': {}
 

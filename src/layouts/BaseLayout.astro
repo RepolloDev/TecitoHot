@@ -1,8 +1,8 @@
 ---
 import "@fontsource/jersey-10";
 import "@fontsource/geist-sans";
+import "@fontsource/geist-mono";
 import "@fontsource/caveat-brush";
-
 
 interface Props {
   title?: string;
@@ -64,5 +64,9 @@ const { title = "Astro" } = Astro.props;
 <style>
   * {
     @apply font-geist-sans;
+  }
+
+  code {
+    @apply font-geist-mono;
   }
 </style>

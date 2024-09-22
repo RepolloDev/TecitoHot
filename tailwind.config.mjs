@@ -12,6 +12,8 @@ export default {
         "geist-sans": ["Geist Sans", "sans-serif"],
         // handwriting font
         "caveat-brush": ["Caveat Brush", "cursive"],
+        // monospace font
+        "geist-mono": ["Geist Mono", "monospace"],
       },
     },
   },
