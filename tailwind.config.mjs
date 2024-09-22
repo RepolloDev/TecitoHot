@@ -21,7 +21,10 @@ export default {
   plugins: [
     require("daisyui"),
     addIconSelectors(["ph"]),
-    require("@catppuccin/tailwindcss"),
+    require("@catppuccin/tailwindcss")({
+      prefix: "ctp",
+      defaultFlavour: "latte",
+    }),
   ],
   daisyui: {
     themes: [
