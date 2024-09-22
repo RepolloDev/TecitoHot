@@ -29,7 +29,7 @@ export default {
   daisyui: {
     themes: [
       {
-        latte: {
+        "ctp-latte": {
           primary: "#71ddc3",
           secondary: "#bfacf1",
           accent: "#edc634",
@@ -49,7 +49,7 @@ export default {
         },
       },
       {
-        mocha: {
+        "ctp-mocha": {
           primary: "#74c7ec",
           secondary: "#cba6f7",
           accent: "#f9e2af",
