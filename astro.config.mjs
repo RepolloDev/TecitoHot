@@ -9,5 +9,5 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [tailwind(), mdx()],
   site: "https://repollodev.github.io",
-  base: "tecitohot",
+  base: "TecitoHot",
 });
