@@ -12,5 +12,5 @@ export const postsScheme = z.object({
     .refine((authors) => authors.length > 0, {
       message: "Post must have at least one author",
     }),
-  cover: z.string().optional().default("assets/cover.webp"),
+  cover: z.string().url().optional(),
 });
