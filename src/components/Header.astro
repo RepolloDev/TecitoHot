@@ -9,10 +9,13 @@ interface Option {
   submenu?: Option[];
 }
 
+const base = import.meta.env.BASE_URL;
+
 const options: Option[] = [
-  { name: "Posts", href: "/tecitohot/posts" },
-  { name: "Tags", href: "/tecitohot/tags" },
-  { name: "Videos", href: "/tecitohot/tags" },
+  { name: "Posts", href: `${base}#posts` },
+  { name: "Tags", href: `${base}#tags` },
+  { name: "Videos", href: `${base}#videos` },
+  { name: "Aceca de", href: `${base}#about` },
 ];
 ---
 
