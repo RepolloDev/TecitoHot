@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const collection = await getCollection("posts");
+const post = collection.pop();
+if (!post) {
+  throw new Error("No posts found");
+}
+const { slug } = post;
+const { title, cover, summary } = post.data;
+
+const base = import.meta.env.BASE_URL;
+const href = `${base}/posts/${slug}`;
+---
+
+<div
+  class="card-post grid grid-rows-[auto_0.4rem] border-[1px] border-neutral max-w-96 bg-base-100 dark:bg-300 absolute before:content-[\'Nuevo\'] before:absolute before:badge-secondary before:rounded before:badge-lg before:-top-2 before:-left-4"
+  class:list={[className]}
+>
+  <div class="flex flex-col gap-2 p-4 sm:p-8">
+    <figure class="">
+      <Image
+        src={cover}
+        alt={`${title} cover image`}
+        width={768}
+        height={402}
+        class="object-cover rounded select-none"
+      />
+    </figure>
+    <div>
+      <span class="badge text-wrap badge-neutral badge-xs">#{slug}</span>
+      <a class="block sm:text-lg md:text-lg link" href={href}>{title}</a>
+    </div>
+    <p class="text-xs sm:text-sm md:text-base">{summary}</p>
+  </div>
+  <div class="flex">
+    <span class="w-full h-full inline-block bg-ctp-red"></span>
+    <span class="w-full h-full inline-block bg-ctp-yellow"></span>
+    <span class="w-full h-full inline-block bg-ctp-green"></span>
+  </div>
+</div>
