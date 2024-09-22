@@ -21,7 +21,7 @@ import LastPostCard from "@/components/post/LastPostCard.astro";
 >
   <section
     id="hero"
-    class="hero-section place-items-center grid grid-cols-1 sm:grid-cols-2 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 gap-10 w-full min-h-[90dvh] bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:24px_24px] notes"
+    class="hero-section place-items-center grid grid-cols-1 sm:grid-cols-2 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 gap-10 w-full min-h-max sm:h-[30rem] md:h-[35rem] lg:h-[40rem] bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:24px_24px] notes"
   >
     <div class="flex flex-col gap-4 lg:gap-10">
       <span class="text-sm md:text-base lg:text-2xl -mb-4 lg:-mb-8"
@@ -48,11 +48,13 @@ import LastPostCard from "@/components/post/LastPostCard.astro";
     <div
       class="relative w-full h-full order-first sm:order-none max-sm:flex max-sm:justify-center"
     >
-      <div class="absolute max-md:top-20 right-0 hidden sm:block">
+      <div
+        class="absolute w-full h-full -bottom-4 md:-bottom-12 lg:bottom-0 md:left-12 lg:left-32 hidden sm:block"
+      >
         <Image
           src={ThinkingImg}
           alt="Ilustración de una persona pensando"
-          class="character w-full max-h-[75dvh] object-contain select-none"
+          class="character w-full h-[25rem] lg:h-[35rem] xl:h-[40rem] object-contain select-none"
         />
       </div>
       <LastPostCard

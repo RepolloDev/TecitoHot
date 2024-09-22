@@ -21,7 +21,7 @@ const href = `${base}/posts/${slug}`;
 ---
 
 <div
-  class="card-post grid grid-rows-[auto_0.4rem] border-[1px] border-neutral max-w-96 bg-base-100 dark:bg-300 absolute before:content-[\'Nuevo\'] before:absolute before:badge-secondary before:rounded before:badge-lg before:-top-2 before:-left-4"
+  class="card-post grid grid-rows-[auto_0.4rem] border-[1px] border-neutral max-w-96 bg-base-100 dark:bg-300 absolute before:absolute before:badge-secondary before:rounded before:badge-lg before:-top-2 before:-left-4"
   class:list={[className]}
 >
   <div class="flex flex-col gap-2 p-4 sm:p-8">
@@ -46,3 +46,9 @@ const href = `${base}/posts/${slug}`;
     <span class="w-full h-full inline-block bg-ctp-green"></span>
   </div>
 </div>
+
+<style>
+  .card-post::before {
+    content: "Nuevo";
+  }
+</style>
