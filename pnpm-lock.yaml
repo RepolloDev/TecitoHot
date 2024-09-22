@@ -17,6 +17,9 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.15.4(rollup@4.21.2)(typescript@5.6.2))(tailwindcss@3.4.11)
+      '@fontsource/caveat-brush':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@fontsource/geist-sans':
         specifier: ^5.1.0
         version: 5.1.0
@@ -375,6 +378,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/caveat-brush@5.1.0':
+    resolution: {integrity: sha512-7O/+D6gacWQoj0kLXbibITBg7CXza0HpCTwRt18mPcj5Udpi7REwn2UPBBcrxvt1CX/nGDFLhFUgxoS5zZG/jg==}
 
   '@fontsource/geist-sans@5.1.0':
     resolution: {integrity: sha512-4AI/UxIcZiYgK6/cTo4R9oM4VHHLcFdHVv7m2+M42VyY16hhKJADrGe4HPjTxvolmce2IZX/jc6sFJ+GkLB64w==}
@@ -2687,6 +2693,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fontsource/caveat-brush@5.1.0': {}
 
   '@fontsource/geist-sans@5.1.0': {}
 

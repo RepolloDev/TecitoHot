@@ -10,6 +10,8 @@ export default {
         "jersey-10": ["'Jersey 10'", "monospace"],
         // Normal font
         "geist-sans": ["Geist Sans", "sans-serif"],
+        // handwriting font
+        "caveat-brush": ["Caveat Brush", "cursive"],
       },
     },
   },
