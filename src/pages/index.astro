@@ -1,10 +1,90 @@
 ---
 import SimpleLayout from "@/layouts/SimpleLayout.astro";
+import { Image } from "astro:assets";
+import ThinkingImg from "@/assets/images/thinking.webp";
+import LastPostCard from "@/components/post/LastPostCard.astro";
 ---
 
 <SimpleLayout
-  title="TecitoHot - Test"
-  description="Esta es una descripción simple para la página de TecitoHot"
+  title="TecitoHot - Blog de informática"
+  description="TecitoHot es un blog de informática donde encontrarás artículos sobre informática y programación, todo explicado de forma sencilla y fácil de entender para que puedas aprender sin complicaciones."
   authors={["repollodev"]}
-  keywords={["astro", "astrojs", "astrojs", "astrojs"]}
-/>
+  keywords={[
+    "astro",
+    "astrojs",
+    "informática",
+    "tecnología",
+    "programación",
+    "blog",
+    "aprender",
+  ]}
+>
+  <section
+    id="hero"
+    class="hero-section place-items-center grid grid-cols-1 sm:grid-cols-2 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 gap-10 w-full min-h-[90dvh] bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:24px_24px] notes"
+  >
+    <div class="flex flex-col gap-4 lg:gap-10">
+      <span class="text-sm md:text-base lg:text-2xl -mb-4 lg:-mb-8"
+        >👋 Bienvenido a TecitoHot</span
+      >
+      <h2
+        class="hero-title font-semibold text-2xl md:text-3xl lg:text-5xl max-w-[18ch]"
+      >
+        Aprende <span class="font-geist-mono text-ctp-mauve capitalize"
+          >informática</span
+        > de forma <span
+          class="text-stroke font-caveat-brush badge badge-primary text-4xl md:text-5xl lg:text-6xl text-black"
+          >simplificada</span
+        >
+      </h2>
+      <p class="hero-description text-lg lg:text-2xl max-w-[34ch]">
+        Aprende a partir de <strong
+          >artículos sobre informática y programación</strong
+        >, todo explicado de forma sencilla y gráfica para entender sin
+        complicaciones.
+      </p>
+      <button class="btn md:btn-lg btn-accent w-max">Post Random</button>
+    </div>
+    <div
+      class="relative w-full h-full order-first sm:order-none max-sm:flex max-sm:justify-center"
+    >
+      <div class="absolute max-md:top-20 right-0 hidden sm:block">
+        <Image
+          src={ThinkingImg}
+          alt="Ilustración de una persona pensando"
+          class="character w-full max-h-[75dvh] object-contain select-none"
+        />
+      </div>
+      <LastPostCard
+        class="max-sm:relative max-sm:mt-8 max-sm:mx-4 sm:-bottom-16 sm:-left-16 lg:-left-10 dark:shadow-lg dark:shadow-neutral sm:scale-75 md:scale-[80%] lg:scale-90"
+      />
+    </div>
+  </section>
+</SimpleLayout>
+
+<style is:inline>
+  .dark .text-stroke {
+    text-shadow:
+      2px 0 #fff,
+      -2px 0 #fff,
+      0 2px #fff,
+      0 -2px #fff,
+      1px 1px #fff,
+      -1px -1px #fff,
+      1px -1px #fff,
+      -1px 1px #fff;
+  }
+
+  .dark .character {
+    filter: opacity(0.8) drop-shadow(0 0 0.5rem #fff);
+  }
+</style>
+
+<style>
+  .notes::after {
+    content: "";
+    @apply absolute w-full h-full opacity-10 lg:opacity-50 -z-10;
+    background-image: url("../assets/images/notes.webp");
+    @apply bg-cover md:bg-contain bg-no-repeat bg-center;
+  }
+</style>
