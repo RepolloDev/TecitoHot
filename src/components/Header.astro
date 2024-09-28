@@ -17,10 +17,20 @@ const options: Option[] = [
   { name: "Videos", href: `${base}#videos` },
   { name: "Aceca de", href: `${base}#about` },
 ];
+
+const borders = [
+  "border-ctp-red",
+  "border-ctp-yellow",
+  "border-ctp-green",
+  "border-ctp-blue",
+  "border-ctp-mauve",
+  "border-ctp-lavender",
+  "border-ctp-peach",
+];
 ---
 
-<header class="sticky top-0 w-full z-50">
-  <div class="navbar bg-base-100 md:px-4 lg:px-8 xl:px-12">
+<header class="padding-responsive sticky top-0 w-full z-50 bg-base-100">
+  <div class="navbar px-0">
     <div class="navbar-start">
       <div class="dropdown">
         <div
@@ -52,7 +62,7 @@ const options: Option[] = [
           }
         </ul>
       </div>
-      <a href="/" class="flex items-center group">
+      <a href={base} class="flex items-center group">
         <Logo
           class="lg:w-14 lg:h-14 -translate-y-1 lg:-translate-y-1.5 group-hover:-rotate-6 group-hover:scale-105 transition-all"
         />
@@ -62,7 +72,7 @@ const options: Option[] = [
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1 text-lg xl:text-xl">
         {
-          options.map(({ name, href, submenu }) => (
+          options.map(({ name, href, submenu }, i) => (
             <li>
               {submenu ? (
                 <details>
@@ -76,7 +86,13 @@ const options: Option[] = [
                   </ul>
                 </details>
               ) : (
-                <a href={href}>{name}</a>
+                <a
+                  href={href}
+                  class="border-b-4"
+                  class:list={borders[i % borders.length]}
+                >
+                  {name}
+                </a>
               )}
             </li>
           ))
@@ -93,9 +109,11 @@ const options: Option[] = [
         </i>
       </a>
       <span
-        class="btn btn-circle btn-sm xl:btn-md bg-yellow-300 hover:bg-yellow-300 text-yellow dark:bg-ctp-lavender dark:text-neutral-content"
+        class="btn btn-circle btn-sm xl:btn-md bg-yellow-200 hover:bg-yellow-200 text-yellow dark:bg-ctp-lavender dark:text-neutral-content"
       >
-        <ToggleTheme class="w-[1.5rem] h-[1.5rem] xl:w-8 xl:h-8" />
+        <ToggleTheme
+          class="w-[1.5rem] h-[1.5rem] xl:w-8 xl:h-8 text-yellow-600 dark:text-neutral-content"
+        />
       </span>
     </div>
   </div>

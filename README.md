@@ -1,7 +1,7 @@
 <p align='center'>
     <img height='150' alt='TecitoHot logo' src='./src/assets/logos/logo-light-border.svg'/>
 </p>
-<h1 align='center'>TecitoHot</h1>
+<h1 align='center'>TecitoHub</h1>
 <p align='center'>
     <a href='./docs/README.md'>
         <img alt='Documentación' src='https://img.shields.io/badge/documentacion-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white'/>
@@ -37,7 +37,7 @@ Es posible leer la documentación completa en [este enlace](./docs/README.md) o 
 
 ## 🔥 Motivaciones
 
-**TecitoHot** nace el 2022 con la idea de ser un proyecto personal para tener apuntes de la universidad, cosa que se veía difícil de hacer con HTML, CSS y Vanilla JS, además de no conocer herramientas más sofisticadas como [Notion](https://www.notion.so/), [Obsidian](https://obsidian.md/) o el propio Markdown.
+**TecitoHub** nace el 2022 con la idea de ser un proyecto personal para tener apuntes de la universidad, cosa que se veía difícil de hacer con HTML, CSS y Vanilla JS, además de no conocer herramientas más sofisticadas como [Notion](https://www.notion.so/), [Obsidian](https://obsidian.md/) o el propio Markdown.
 
 Con el tiempo, desee compartir mis apuntes con el mundo, **cosas que me costaron bastante en buscar y simplificar**, para que otros estudiantes puedan acceder directamente a la información y no perder tiempo en buscarla en internet o en libros que difícilmente se encuentran.
 
@@ -50,7 +50,7 @@ El proyecto fracasó en sus primeras versiones, por mi propia falta de conocimie
 
 ## 👀 A donde vamos a llegar?
 
-**TecitoHot** comienza por la idea de ser un blog de informática para compartir lo que se aprende en la universidad y en la vida diaria, pero se busca escalar a una plataforma de aprendizaje.
+**TecitoHub** comienza por la idea de ser un blog de informática para compartir lo que se aprende en la universidad y en la vida diaria, pero se busca escalar a una plataforma de aprendizaje.
 
 ```mermaid
 graph
