@@ -1,4 +1,5 @@
 const { addIconSelectors } = require("@iconify/tailwind");
+const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -24,6 +25,28 @@ export default {
     require("@catppuccin/tailwindcss")({
       prefix: "ctp",
       defaultFlavour: "latte",
+    }),
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".padding-responsive": {
+          padding: "0 1rem",
+          "@screen sm": {
+            padding: "0 1.5rem",
+          },
+          "@screen md": {
+            padding: "0 3rem",
+          },
+          "@screen lg": {
+            padding: "0 4rem",
+          },
+          "@screen xl": {
+            padding: "0 5rem",
+          },
+          "@screen 2xl": {
+            padding: "0 6rem",
+          },
+        },
+      });
     }),
   ],
   daisyui: {
