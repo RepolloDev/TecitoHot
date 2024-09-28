@@ -11,7 +11,7 @@ export default defineConfig({
   output: "static",
   integrations: [tailwind(), mdx()],
   site: "https://repollodev.github.io",
-  base: "TecitoHot",
+  base: "TecitoHub",
   markdown: {
     remarkPlugins: [remarkGithubAlerts, remarkMath],
     rehypePlugins: [rehypeMathJax],
